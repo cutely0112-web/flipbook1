@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Flipbook Reader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: '#254B4F',
+                light: '#3A6B70',
+                ink: '#F5E9D8',
+              },
+              paper: '#f7f3ea',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #f7f3ea; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+    <!-- Babel for compiling TSX in browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Public CDN Import Map -->
+
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?external=react",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@3.11.174",
+    "page-flip": "https://esm.sh/page-flip@2.0.7",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/flipbook1/assets/index-KlPDQlHd.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Load the app entry point with Babel -->
+    <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
+</body>
+</html>
