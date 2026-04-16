@@ -187,7 +187,7 @@ const App: React.FC = () => {
           <a
             href="https://link.coupang.com/a/eqlzU3"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             referrerPolicy="unsafe-url"
           >
             <img
@@ -196,7 +196,7 @@ const App: React.FC = () => {
               className="max-w-full h-auto block mx-auto"
             />
           </a>
-          <p className="text-[10px] text-stone-400 mt-0.5 px-4 text-center">
+          <p className="text-[16px] text-sky-400 mt-0.5 px-4 text-center">
             이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
           </p>
         </div>
@@ -256,6 +256,7 @@ const App: React.FC = () => {
               onClick={handlePrevPage}
               disabled={!state.pdf || state.currentPage <= 1}
               className="w-8 h-8 flex items-center justify-center bg-white border border-stone-200 hover:bg-stone-50 hover:shadow-sm rounded-full transition-all disabled:opacity-30"
+              title="이전 페이지"
             >
               <ChevronLeft size={18} />
             </button>
@@ -270,6 +271,7 @@ const App: React.FC = () => {
                 !state.pdf || state.currentPage >= state.totalPages
               }
               className="w-8 h-8 flex items-center justify-center bg-white border border-stone-200 hover:bg-stone-50 hover:shadow-sm rounded-full transition-all disabled:opacity-30"
+              title="다음 페이지"
             >
               <ChevronRight size={18} />
             </button>
@@ -282,6 +284,7 @@ const App: React.FC = () => {
                 className="border border-stone-300 rounded-md text-sm px-2 py-1 bg-white"
                 value={selectedEbook}
                 onChange={handleSelectEbook}
+                title="eBook 선택"
               >
                 <option value="">eBook 선택</option>
                 {EBOOKS.map(book => (
@@ -298,6 +301,7 @@ const App: React.FC = () => {
               onChange={handleFileUpload}
               className="hidden"
               accept=".pdf"
+              title="PDF 파일 업로드"
             />
             <button
               onClick={() => fileInputRef.current?.click()}
@@ -311,6 +315,7 @@ const App: React.FC = () => {
               <button
                 onClick={() => handleZoom(-0.1)}
                 className="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-white rounded-full transition-colors"
+                title="축소"
               >
                 <ZoomOut size={18} />
               </button>
@@ -320,6 +325,7 @@ const App: React.FC = () => {
               <button
                 onClick={() => handleZoom(0.1)}
                 className="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-white rounded-full transition-colors"
+                title="확대"
               >
                 <ZoomIn size={18} />
               </button>
@@ -365,6 +371,7 @@ const App: React.FC = () => {
                 <button
                   onClick={() => handleZoom(-0.1)}
                   className="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-white rounded-full transition-colors"
+                  title="축소"
                 >
                   <ZoomOut size={16} />
                 </button>
@@ -374,6 +381,7 @@ const App: React.FC = () => {
                 <button
                   onClick={() => handleZoom(0.1)}
                   className="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-white rounded-full transition-colors"
+                  title="확대"
                 >
                   <ZoomIn size={16} />
                 </button>
@@ -397,6 +405,7 @@ const App: React.FC = () => {
                   className="w-full border border-stone-300 rounded-md text-xs px-2 py-1.5 bg-white"
                   value={selectedEbook}
                   onChange={handleSelectEbook}
+                  title="eBook 선택"
                 >
                   <option value="">선택하세요</option>
                   {EBOOKS.map(book => (
