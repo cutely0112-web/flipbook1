@@ -1,0 +1,5 @@
+{
+  "name": "React Flipbook Reader",
+  "description": "A high-performance PDF flipbook reader with accurate link coordinate mapping.",
+  "requestFramePermissions": []
+}
